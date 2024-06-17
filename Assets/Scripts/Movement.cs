@@ -15,17 +15,13 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called at a fixed interval and is used for physics calculations
+    void FixedUpdate()
     {
         // Get input from arrow keys or WASD
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-    }
 
-    // FixedUpdate is called at a fixed interval and is used for physics calculations
-    void FixedUpdate()
-    {
         // Move the player
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
