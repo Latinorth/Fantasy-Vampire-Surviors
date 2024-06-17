@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|c:\\users\\jack howard\\desktop\\stuff\\fantasy-vampire-surviors\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|c:\\users\\jack howard\\desktop\\stuff\\fantasy-vampire-surviors\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|c:\\users\\jack howard\\desktop\\stuff\\fantasy-vampire-surviors\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
@@ -35,7 +35,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Movement.cs",
