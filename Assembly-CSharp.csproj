@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\greatsword script.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
