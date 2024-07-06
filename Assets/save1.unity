@@ -415,7 +415,7 @@ MonoBehaviour:
   radius: 2
   thetaTime: 0
   swordSpeed: 1
-  swordRotationSpeed: 0.1
+  swordRotationSpeed: 2
   player: {fileID: 1632924140}
 --- !u!50 &1396230278
 Rigidbody2D:
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb45ab470e6ea7f4a80ba6258db072c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 11232
+  moveSpeed: 10
 --- !u!212 &1632924139
 SpriteRenderer:
   m_ObjectHideFlags: 0
