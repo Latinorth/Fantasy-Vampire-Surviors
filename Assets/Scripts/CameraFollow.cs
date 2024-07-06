@@ -5,6 +5,10 @@ public class CameraFollow : MonoBehaviour
     public Transform player; // Reference to the player's transform
     public Vector3 offset; // Offset between the player and the camera
 
+    private void Start()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
