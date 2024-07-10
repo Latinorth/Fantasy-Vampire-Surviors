@@ -36,14 +36,14 @@ public class greatswordscript : MonoBehaviour
         thetaTime = swordSpeed * (float)Time.timeAsDouble + Mathf.PI/6;
         //movement.x = moveSpeed * Mathf.Pow(Mathf.Sin(2 * theta), 0.5f) * Mathf.Pow(Mathf.Sin(theta), 0.1f) * Mathf.Cos(theta);
         //movement.y = moveSpeed * Mathf.Pow(Mathf.Sin(2 * theta), 0.5f) * Mathf.Pow(Mathf.Sin(theta), 0.1f) * Mathf.Sin(theta);
-        //movement.y = radius * Mathf.Sin(2 * thetaTime) * Mathf.Sin(thetaTime);
-        //movement.x = radius * Mathf.Sin(2 * thetaTime) * Mathf.Cos(thetaTime);
+        movement.y = radius * Mathf.Sin(2 * thetaTime) * Mathf.Sin(thetaTime);
+        movement.x = radius * Mathf.Sin(2 * thetaTime) * Mathf.Cos(thetaTime);
 
-        transform.position = (Vector2)player.position + movement + 5 * Vector2.up;
+        transform.position = (Vector2)player.position + movement;
         transform.Rotate(0, 0, swordRotationSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
