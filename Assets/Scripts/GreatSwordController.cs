@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class greatswordscript : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class greatswordscript : MonoBehaviour
     public float thetaTime;
     public float swordSpeed;
     public float swordRotationSpeed = Mathf.PI/18;
+    public int killed;
+    public TextMeshProUGUI killedCanvas;
 
 
     private Rigidbody2D rb;
@@ -43,7 +47,9 @@ public class greatswordscript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            killed++;
             Destroy(other.gameObject);
+            killedCanvas.text = "Greatsword: " + killed;
         }
     }
 }
