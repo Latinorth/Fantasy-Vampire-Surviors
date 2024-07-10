@@ -101,8 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.02
   enemyRb: {fileID: 7776804893501032412}
-  playerx: 0
-  playery: 0
+  health: 4
 --- !u!50 &7776804893501032412
 Rigidbody2D:
   serializedVersion: 4

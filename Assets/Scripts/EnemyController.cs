@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D enemyRb;
     private GameObject player;
     private Vector2 movement;
-    public float playerx;
-    public float playery;
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +24,5 @@ public class Enemy : MonoBehaviour
         //enemyRb.MovePosition(enemyRb.position + movement * speed);
         Vector2 lookDirection = (player.transform.position - transform.position);
         enemyRb.MovePosition(enemyRb.position + lookDirection * speed);
-
-        playerx = player.transform.position.x;
-        playery = player.transform.position.y;
     }
 }

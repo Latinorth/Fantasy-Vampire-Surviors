@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6470960004946401432}
   m_Layer: 0
   m_Name: Greatsword
-  m_TagString: Weapon
+  m_TagString: Greatsword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   thetaTime: 0
   swordSpeed: 1
   swordRotationSpeed: 2
+  killed: 0
+  killedCanvas: {fileID: 0}
   player: {fileID: 0}
 --- !u!50 &141642500030391268
 Rigidbody2D:
