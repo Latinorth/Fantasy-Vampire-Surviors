@@ -10,17 +10,25 @@ public class spawnManager : MonoBehaviour
     private GameObject player;
     public float theRange;
     public bool cooldown = true;
-    void Start()
+
+    public TextMeshProUGUI YouLoseText;
+
+    public void YouLose()
     {
-        
+        YouLoseText.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayerController playerController = gameObject.GetComponent<PlayerController>();
         if (cooldown)
         {
             SpawnEm();
+        }
+        if (playerController.health == 0)
+        {
+
         }
     }
 
