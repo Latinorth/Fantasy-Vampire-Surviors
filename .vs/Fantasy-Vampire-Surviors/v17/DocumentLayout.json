@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\greatswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|c:\\users\\jack howard\\desktop\\stuff\\fantasy-vampire-surviors\\assets\\scripts\\greatswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\greatswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|c:\\users\\jack howard\\desktop\\stuff\\fantasy-vampire-surviors\\assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCB484DC-7D2D-7FFC-E09E-DA0D053F958A}|Assembly-CSharp.csproj|C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,36 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GreatSwordController.cs",
               "DocumentMoniker": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\GreatSwordController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GreatSwordController.cs",
               "ToolTip": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\GreatSwordController.cs",
               "RelativeToolTip": "Assets\\Scripts\\GreatSwordController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACkAAABBAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-09T17:48:13.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAuwB4AAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:47:44.49Z"
+              "WhenOpened": "2024-07-09T17:47:44.49Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EnemyController.cs",
               "DocumentMoniker": "C:\\Users\\Jack Howard\\Desktop\\sTUFF\\Fantasy-Vampire-Surviors\\Assets\\Scripts\\EnemyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyController.cs",
@@ -67,8 +68,7 @@
               "RelativeToolTip": "Assets\\Scripts\\EnemyController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:47:25.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-09T17:47:25.402Z"
             },
             {
               "$type": "Document",

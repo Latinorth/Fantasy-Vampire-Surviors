@@ -9,6 +9,19 @@ public class Movement : MonoBehaviour
     private Rigidbody2D Playerrb;
     private Vector2 movement;
 
+
+    public Animation up;
+    public Animation down;
+    public Animation left;
+    public Animation right;
+    public Animation idle;
+
+    public bool upBool;
+    public bool downBool;
+    public bool leftBool;
+    public bool rightBool;
+    public bool idleBool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +30,41 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Get input from arrow keys or WASD
-        movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
 
-        // Move the player
+
+        if (movement.y == 1)
+        {
+            upBool = true;
+            downBool = false;
+        }
+        else if (movement.y == -1)
+        {
+            downBool = true;
+            upBool = false;
+        }
+        else if (movement.x == 1)
+        {
+            rightBool = true;
+            leftBool = false;
+        }
+        else if (movement.x == -1)
+        {
+            leftBool = true;
+            rightBool = false;
+        }
+        else if(movement.y == 0 && movement.x == 0)
+        {
+            idleBool = true;
+            upBool = false;
+            downBool = false;
+            rightBool = false;
+            leftBool = false;
+        }
+
+
+
         Playerrb.MovePosition(Playerrb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
     private void OnTriggerEnter2D(Collider2D other)
