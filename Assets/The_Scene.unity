@@ -313,6 +313,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 119166428134127029, guid: a6f176004fef04044acf96d928d5f45f, type: 3}
   theRange: 20
   cooldown: 1
+  YouLoseText: {fileID: 0}
 --- !u!4 &812335400
 Transform:
   m_ObjectHideFlags: 0
@@ -772,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb45ab470e6ea7f4a80ba6258db072c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   moveSpeed: 10
   up: {fileID: 0}
   down: {fileID: 0}
