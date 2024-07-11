@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Movement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public int health;
     public float moveSpeed = 5f;
     private Rigidbody2D Playerrb;
     private Vector2 movement;

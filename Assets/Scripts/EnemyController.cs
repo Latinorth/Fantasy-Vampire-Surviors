@@ -25,4 +25,14 @@ public class EnemyController : MonoBehaviour
         Vector2 lookDirection = (player.transform.position - transform.position);
         enemyRb.MovePosition(enemyRb.position + lookDirection * speed);
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerController playerController = gameObject.GetComponent<PlayerController>();
+            playerController.health -= 1;
+        }
+    }
 }
+        
+
