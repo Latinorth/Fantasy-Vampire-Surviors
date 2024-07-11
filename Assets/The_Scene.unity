@@ -773,6 +773,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  up: {fileID: 0}
+  down: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  idle: {fileID: 0}
+  upBool: 0
+  downBool: 0
+  leftBool: 0
+  rightBool: 0
+  idleBool: 0
 --- !u!212 &1632924139
 SpriteRenderer:
   m_ObjectHideFlags: 0
