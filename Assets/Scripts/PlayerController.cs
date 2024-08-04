@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D Playerrb;
     private Vector2 movement;
-    private Animator animator;
 
 
     public Animation up;
@@ -28,27 +27,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Playerrb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         movement.y = Input.GetAxisRaw("Vertical");
         movement.x = Input.GetAxisRaw("Horizontal");
-
-
-        if (movement.x != 0 || movement.y != 0)
-        {
-
-            animator.SetFloat("X", movement.x);
-            animator.SetFloat("Y", movement.y);
-
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
-        }
 
 
         if (movement.y == 1)
