@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public int health;
+    public TextMeshProUGUI healthCanvas;
+    public bool alive;
     public float moveSpeed = 5f;
     private Rigidbody2D Playerrb;
     private Vector2 movement;
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Playerrb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        alive = true;
     }
 
     void FixedUpdate()
@@ -80,15 +84,16 @@ public class PlayerController : MonoBehaviour
             leftBool = false;
         }
 
-
-
-        Playerrb.MovePosition(Playerrb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
+        if (alive)
         {
-            Debug.Log("You Lose :(");
+            Playerrb.MovePosition(Playerrb.position + moveSpeed * Time.fixedDeltaTime * movement);
         }
+
+        if (health <= 0)
+        {
+            alive = false;
+        }
+
+        healthCanvas.text = "" + health;
     }
 }

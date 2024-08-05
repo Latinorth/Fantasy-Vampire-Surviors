@@ -2,48 +2,98 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
-public class spawnManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject playerPrefab;
+    public GameObject greatswordPrefab;
+    public GameObject cameraPrefab;
+
+    public Canvas canvas;
+    public GameObject greatswordUIPrefab;
+    public GameObject healthUIPrefab;
+
     public GameObject enemyPrefab;
-    private GameObject player;
+    public GameObject player;
     public float theRange;
+
     public bool cooldown = true;
 
-    public TextMeshProUGUI YouLoseText;
+    private PlayerController playerController;
+
+    public GameObject gameOverScreen;
+    private bool once = true;
 
     public void YouLose()
     {
-        YouLoseText.gameObject.SetActive(true);
+        GameObject gameOverScreenSpawned = Instantiate(gameOverScreen, canvas.transform);
+        gameOverScreenSpawned.name = gameOverScreen.name;
+        once = !once;
+    }
+
+    void Start()
+    {
+        GameObject playerSpawned = Instantiate(playerPrefab, new Vector2(0, 0), playerPrefab.transform.rotation);
+        playerSpawned.name = playerPrefab.name;
+        player = playerSpawned;
+
+        GameObject healthUISpawned = Instantiate(healthUIPrefab, canvas.transform);
+        healthUISpawned.name = healthUIPrefab.name;
+
+        GameObject greatswordUISpawned = Instantiate(greatswordUIPrefab, canvas.transform);
+        greatswordUISpawned.name = greatswordUIPrefab.name;
+
+        GameObject greatswordSpawned = Instantiate(greatswordPrefab, new Vector2(0, 0), greatswordPrefab.transform.rotation);
+        greatswordSpawned.name = greatswordPrefab.name;
+
+        GameObject cameraSpawned = Instantiate(cameraPrefab, new Vector2(0, 0), cameraPrefab.transform.rotation);
+        cameraSpawned.name = cameraPrefab.name;
+
+        GreatSwordController GreatSwordController = greatswordSpawned.GetComponent<GreatSwordController>();
+        GreatSwordController.player = player.GetComponent<Transform>();
+        GreatSwordController.killedCanvas = greatswordUISpawned.GetComponent<TextMeshProUGUI>();
+
+        CameraController cameraController = cameraSpawned.GetComponent<CameraController>();
+        cameraController.player = player.GetComponent<Transform>();
+
+        playerController = player.GetComponent<PlayerController>();
+        playerController.healthCanvas = healthUISpawned.GetComponent <TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerController playerController = gameObject.GetComponent<PlayerController>();
-        if (cooldown)
+        if (cooldown && playerController.alive)
         {
             SpawnEm();
         }
-        if (playerController.health == 0)
+        if (!playerController.alive && once)
         {
-
+            YouLose();
         }
     }
 
     private void SpawnEm()
     {
         cooldown = false;
-        player = GameObject.Find("Player");
         if (Random.value > 0.5)
         {
-            Instantiate(enemyPrefab, new Vector2(player.transform.position.x + Random.Range(-theRange, theRange), player.transform.position.y + 13), enemyPrefab.transform.rotation);
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(player.transform.position.x + Random.Range(-theRange, theRange), player.transform.position.y + 13), enemyPrefab.transform.rotation);
+            enemy.name = enemyPrefab.name;
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            enemyController.player = player;
         }
         else
         {
-            Instantiate(enemyPrefab, new Vector2(player.transform.position.x + Random.Range(-theRange, theRange), player.transform.position.y - 13), enemyPrefab.transform.rotation);
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(player.transform.position.x + Random.Range(-theRange, theRange), player.transform.position.y - 13), enemyPrefab.transform.rotation);
+            enemy.name = enemyPrefab.name;
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            enemyController.player = player;
         }
+        
         StartCoroutine(SpawnEmCooldown());
     }
 

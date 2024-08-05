@@ -5,30 +5,22 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class greatswordscript : MonoBehaviour
+public class GreatSwordController : MonoBehaviour
 {
 
     public float radius;
     public float thetaTime;
     public float swordSpeed;
     public float swordRotationSpeed = Mathf.PI/18;
+
     public int killed;
     public TextMeshProUGUI killedCanvas;
 
-
-    private Rigidbody2D rb;
     private Vector2 movement;
 
     public Transform player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        //GetPlayerRb = otherGameObject.GetComponent<Playerrb>();
-        //GetPlayerRb = Playerrb;
-        //Rigidbody2D Playerrb
-    }
+    private EnemyController enemyController;
 
     // Update is called once per frame
     void Update()
@@ -47,7 +39,7 @@ public class greatswordscript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyController enemyController = other.gameObject.GetComponent<EnemyController>();
+            enemyController = other.gameObject.GetComponent<EnemyController>();
             enemyController.health -= 1;
             if (enemyController.health < 0)
             {

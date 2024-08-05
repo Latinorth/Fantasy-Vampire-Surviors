@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 99caa77ce18a72546997ad5fcf35bc2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   swordSpeed: 1
   swordRotationSpeed: 2
   killed: 0
-  killedCanvas: {fileID: 0}
-  player: {fileID: 0}
+  killedCanvas: {fileID: 5090079028108998033, guid: 959d34db58bc5df48bcc3d6b6418a363, type: 3}
+  player: {fileID: 2620257679672243738, guid: 1e4d3ad7d3721c541818dacf7aa68451, type: 3}
 --- !u!50 &141642500030391268
 Rigidbody2D:
   serializedVersion: 4

@@ -1,38 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class EnemyController : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D enemyRb;
-    private GameObject player;
-    private Vector2 movement;
+    public GameObject player;
     public int health;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //movement = player.transform.position - transform.position.normalized;
         //enemyRb.MovePosition(enemyRb.position + movement * speed);
-        Vector2 lookDirection = (player.transform.position - transform.position);
-        enemyRb.MovePosition(enemyRb.position + lookDirection * speed);
+        Vector2 lookDirection = (player.transform.position - transform.position).normalized;
+        enemyRb.MovePosition(enemyRb.position + speed * Time.fixedDeltaTime * lookDirection);
     }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController playerController = gameObject.GetComponent<PlayerController>();
             playerController.health -= 1;
         }
     }
 }
-        
+
 
